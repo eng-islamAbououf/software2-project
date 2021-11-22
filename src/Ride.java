@@ -1,7 +1,7 @@
 
 public class Ride extends AllRides {
 
-    static int counter = 1;
+    private static int counter = 1;
 
     // notify
     @Override
