@@ -1,7 +1,6 @@
-import java.util.ArrayList;
+
 import java.util.Objects;
 import java.util.Scanner;
-
 public class Main {
     static int userId = 1;
     static int driverId = 1;
@@ -18,7 +17,7 @@ public class Main {
 
 
         while (true) {
-            System.out.println("1- Sign up  \n2- Login  \n3-Exit");
+            System.out.println("1- Sign up  \n2- Login  \n3- Exit");
             String in = input.nextLine();
 
             if (Objects.equals(in, "1")) {
@@ -107,14 +106,12 @@ public class Main {
                     break;
                 } else {
                     System.out.println("Wrong choice try again");
-                    continue;
                 }
             } else if (Objects.equals(in, "3")) {
                 System.out.println("Exit...");
                 break;
             } else {
                 System.out.println("Wrong choice try again");
-                continue;
             }
         }
     }

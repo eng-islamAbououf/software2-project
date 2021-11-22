@@ -58,7 +58,7 @@ public class Driver extends Users {
         if (id != -1) {
             Driver driver = Database.drivers.get(id - 1);
             while (true) {
-                System.out.println("1- Add a Ride  2- see my favourite rides  3-Remove a Ride  4- cancel");
+                System.out.println("1- Add a Ride \n  2- See my favourite rides \n  3-Remove a Ride \n 4- Show accepted rides \n  5- cancel");
                 in1 = input.nextLine();
                 if (Objects.equals(in1, "1")) {
                     Ride ride = new Ride();
@@ -96,6 +96,17 @@ public class Driver extends Users {
                    }else{
                        System.out.println("You don't have any rides");
                    }
+                }else if(Objects.equals(in1,"4")){
+                    if(acceptedRides.size()!=0){
+                        for(SuccessfulRide ride : acceptedRides){
+                            System.out.println("Source: "+ride.getRide().getSource());
+                            System.out.println("Destination: "+ride.getRide().getDestination());
+                            System.out.println("Price: "+ride.getRide().getPrice());
+                            System.out.println("Rate: "+ride.getRate());
+                        }
+                    }else{
+                        System.out.println("No accepted rides until now...");
+                    }
                 }
 
                 else {
